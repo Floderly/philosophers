@@ -6,7 +6,7 @@
 #    By: fderly <fderly@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/17 12:00:49 by chugot            #+#    #+#              #
-#    Updated: 2023/08/27 02:51:54 by fderly           ###   ########.fr        #
+#    Updated: 2023/09/07 19:45:39 by fderly           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,11 @@ NAME =	philosophers
 
 SRCS =	main.c \
 		ft_atoi.c \
+		time.c \
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -lreadline -lhistory
+CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
 
 OBJS = $(SRCS:.c=.o)
 
